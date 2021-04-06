@@ -17,21 +17,30 @@ body {
 
 h1 {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-h2 {
+.barra-lateral h2 {
     font-size: 18px;
     padding: 8px 12px;
     border-left: 2px solid #FE0078;
     align-self: center;
 }
 
+.conteudo h2 {
+    font-size: 16px;
+}
+
 h1, h2 {
     color: black;
 }
 
-a{
+h3 {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+a {
     text-decoration: none;
     color: #545454;
 }
@@ -59,38 +68,98 @@ main {
     gap: 50px;
 }
 
-.conteudo{
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    row-gap: 40px;
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    text-align: left;
+    color: black;
+    width: 100%;
+    padding: 10px 20px;
 }
 
-.post {
-    
+.title-info, .informacoes, .entre-em-contato {
+    padding: 18px 0;
 }
 
-.title-info {
+.informacoes p {
+    padding: 10px 0;
+}
+
+.subtitulo {
+    display: flex;
+    align-items: center;
     margin-top: 15px;
-    padding: 20px;
 }
 
-.post-image {
-    width: 730px;
-    height: 350px;
+.fas {
+    color: #FE0078;
+    width: 28px;
 }
 
-.post-text {
-    padding: 25px 20px;
+form {
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+    "name email"
+    "subject subject"
+    "comment comment";
+    grid-template-columns: 50% 50%;
+    row-gap: 10px;
+    column-gap:10px;
+    color: black;
+    margin-top: 20px;
 }
 
-.post-text p {
-    margin-bottom: 20px;
+.name-input {
+    grid-area: name;
 }
 
-.continuar-lendo {
+.email-input {
+    grid-area: email;
+}
+
+.subject-input {
+    grid-area: subject;
+}
+
+.comment-input {
+    grid-area: comment;
+}
+
+.enviar {
     display: flex;
     justify-content: flex-end;
-    padding: 20px;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+input, textarea {
+    all: unset;
+}
+
+form input {
+    background-color: #FFFFFF;
+    display: block;
+    width: 330px;
+    height: 42px;
+}
+
+.subject-input input {
+    width: 685px;
+}
+
+textarea {
+    background-color: #FFFFFF;
+    width: 685px;
+    height: 170px;
+}
+
+form input, textarea {
+    margin-top: 10px;
+    border: 1px solid #EEEEEE;
+    border-radius: 2px;
 }
 
 button {
@@ -98,15 +167,17 @@ button {
 }
 
 button {
-    background-color: #FFFFFF;
-    width: 150px;
+    background-color: #FE0078;
+    color: #FFFFFF;
+    width: 90px;
+    height: 43px;
     text-align: center;
-    padding: 12px 14px;
+    padding: 2px 14px;
     border: 1px solid #FE0078;
     border-radius: 20px;
 }
 
-.post, .barra-lateral{
+.conteudo, .barra-lateral{
     background-color: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
@@ -118,10 +189,6 @@ button {
     gap: 20px;
     padding: 20px 20px 40px 20px;
     height: 1396px;
-}
-
-input {
-    all: unset;
 }
 
 .pesquisa {
@@ -160,13 +227,16 @@ input {
     font-size: 36px;
 }
 
-button:hover {
-    background-color: #FE0078;
-    color: #FFFFFF;
+form input:hover, textarea:hover {
+    border: 1px solid #FE0078;
 }
 
 .pesquisa:hover {
     border: 1px solid #FE0078;
+}
+
+a:hover {
+    color: #FE0078;
 }
 
 .categoria:hover {
@@ -174,7 +244,7 @@ button:hover {
     border-bottom: 2px dotted #FE0078;
 }
 
-button:hover, .pesquisa:hover, .categoria:hover {
+button:hover, input:hover, textarea:hover, .pesquisa:hover, .categoria:hover {
     cursor: pointer;
 }
 
