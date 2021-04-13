@@ -97,6 +97,10 @@ main {
     width: 28px;
 }
 
+input {
+    all: unset;
+}
+
 form {
     display: grid;
     width: 100%;
@@ -135,25 +139,28 @@ form {
     padding: 10px;
 }
 
-input, textarea {
-    all: unset;
-}
-
 form input {
     background-color: #FFFFFF;
     display: block;
-    width: 330px;
+    width: 314px;
     height: 42px;
+    padding-left: 15px;
 }
 
 .subject-input input {
-    width: 685px;
+    width: 668px;
 }
 
 textarea {
     background-color: #FFFFFF;
     width: 685px;
     height: 170px;
+    padding: 15px;
+    outline: none;
+    resize: vertical;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #545454;
 }
 
 form input, textarea {

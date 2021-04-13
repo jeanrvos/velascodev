@@ -120,6 +120,10 @@ button {
     gap: 20px;
 }
 
+input {
+    all: unset;
+}
+
 form {
     display: grid;
     grid-template-areas: 
@@ -133,7 +137,7 @@ form {
 
 form input {
     display: block;
-    width: 355px;
+    width: 338px;
 }
 
 .name-input {
@@ -148,25 +152,29 @@ form input {
     grid-area: comment;
 }
 
-input, textarea {
-    all: unset;
-}
-
 form input {
     background-color: #FFFFFF;
     height: 42px;
+    padding-left: 15px;
 }
 
 textarea {
     background-color: #FFFFFF;
     width: 730px;
     height: 170px;
+    padding: 15px;
+    outline: none;
+    resize: vertical;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #545454;
 }
 
 form input, textarea {
     margin-top: 10px;
     border: 1px solid #EEEEEE;
     border-radius: 2px;
+    
 }
 
 .barra-lateral {
